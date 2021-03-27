@@ -10,4 +10,6 @@ Join the Orders, OrderDetails, and Employees tables to return a report with with
 Paste the SQL statement you used below.  Hint: EmployeeName is not a column in the Employee table, but you can generate a
 report with EmployeeName by starting your SQL this way: SELECT (Employees.FirstName || " " || Employees.LastName) AS EmployeeName,
 
-
+SELECT emp.FirstName || " " || emp.LastName AS "EmployeeName", ode.ProductID AS "Product ID", ode.Quantity AS "Quantity" FROM Orders AS "ord"
+    INNER JOIN OrderDetails AS "ode"
+    INNER JOIN Employees AS "emp";
