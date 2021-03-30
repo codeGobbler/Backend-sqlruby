@@ -4,25 +4,57 @@ def ask (question)
 end
 
 def hours(num_years)
-    return num_years * 365 * 24
+    year_hours = num_years * 8760
+    return year_hours.floor(2)
 end
 
 def minutes(num_decades)
-    return num_decades * 10 * 365 * 24 * 60
+    decade_minutes = num_decades * 5259492
+    return decade_minutes.floor(2)
 end
 
-years = ask("What's your favorite number of years?").to_i
-puts "Wow!" 
-sleep 2
-puts "That's..uhh..hold on.."
-sleep 3
-puts "..almost got it.."
-sleep 2
-puts "That's #{hours(years)} hours worth of years!"
+def seconds(years_old)
+    age_seconds = years_old * 31556952
+    return age_seconds.floor(2)
+end
 
-decades = ask("How many decades? (pick any number)")
+years = ask("How old is your car?").to_i
+puts "Wow!" 
+sleep 1
+puts "So that means..uhh..hold on.."
+sleep 2
+puts "..thinking..thinking.."
+sleep 2
+puts "Ah ok! cool."
+sleep 1
+puts "Fun fact: Your car didn't exist #{hours(years)} hours ago!"
+sleep 1
+
+decades = ask("How many decades old is your house?").to_i
 puts "Impressive.."
+sleep 1
+puts "Hold, on. I know this.."
+sleep 2
+puts "That's #{minutes(decades)} minutes worth of house!"
+sleep 1
+puts "Ok, one more and I'll leave you alone"
+sleep 2
+
+age = ask("How old are you?").to_i
+puts "Ah, a wonderful age indeed!"
+sleep 1
+puts "Allow me to calculate your age in seconds!"
+sleep 2
+puts "Give me one more second here.."
+sleep 1
+puts "*makes computer noises*"
 sleep 3
-puts "This may take a while.."
+puts "So, I think you're.." 
+sleep 1
+puts "..approx #{seconds(age)} seconds old. So.."
+sleep 2
+puts "..there's that."
 sleep 3
-puts "That's #{hours(years)} minutes worth of years!"
+puts "But hey, it's been fun. I've got to go now"
+sleep 2
+puts "Bye!"
