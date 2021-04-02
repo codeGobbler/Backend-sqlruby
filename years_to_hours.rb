@@ -4,17 +4,27 @@ def ask (question)
 end
 
 def hours(num_years)
-    year_hours = num_years * 8760
+    days_year = 365
+    hours_day = 24
+    year_hours = num_years * days_year * hours_day
     return year_hours.floor(2)
 end
 
 def minutes(num_decades)
-    decade_minutes = num_decades * 5259492
+    years_decade = 10
+    days_year = 365
+    hours_day = 24
+    minutes_hour = 60
+    decade_minutes = num_decades * years_decade * days_year * hours_day * minutes_hour
     return decade_minutes.floor(2)
 end
 
 def seconds(years_old)
-    age_seconds = years_old * 31556952
+    days_year = 365
+    hours_day = 24
+    minutes_hour = 60
+    seconds_minute = 60
+    age_seconds = years_old * days_year * hours_day * minutes_hour * seconds_minute
     return age_seconds.floor(2)
 end
 
@@ -23,17 +33,17 @@ puts "Wow!"
 sleep 1
 puts "So that means..uhh..hold on.."
 sleep 2
-puts "..thinking..thinking.."
+puts "*..beep...boop..*"
 sleep 2
-puts "Ah ok! cool."
+puts "Aha!"
 sleep 1
-puts "Fun fact: Your car didn't exist #{hours(years)} hours ago!"
+puts "Fun fact: If your car measured time instead of miles, your odometer would read: #{hours(years)} hours!"
 sleep 1
 
 decades = ask("How many decades old is your house?").to_i
 puts "Impressive.."
 sleep 1
-puts "Hold, on. I know this.."
+puts "*computer noise*"
 sleep 2
 puts "That's #{minutes(decades)} minutes worth of house!"
 sleep 1
@@ -47,7 +57,7 @@ puts "Allow me to calculate your age in seconds!"
 sleep 2
 puts "Give me one more second here.."
 sleep 1
-puts "*makes computer noises*"
+puts "*more random computer noises*"
 sleep 3
 puts "So, I think you're.." 
 sleep 1
