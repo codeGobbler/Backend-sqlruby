@@ -1,15 +1,16 @@
+#method that asks user a question and returns the chomped string
 def ask (question)
     print question + " "
     gets.chomp
 end
-
+#method that calculates the number of hours in a user provided amount of years and returns the result
 def hours(num_years)
     days_year = 365
     hours_day = 24
     year_hours = num_years * days_year * hours_day
     return year_hours.floor(2)
 end
-
+#method that calculates the number of minutes in a user provided amount of decades and returns the result
 def minutes(num_decades)
     years_decade = 10
     days_year = 365
@@ -18,7 +19,7 @@ def minutes(num_decades)
     decade_minutes = num_decades * years_decade * days_year * hours_day * minutes_hour
     return decade_minutes.floor(2)
 end
-
+#method that calculates the number of seconds in a user provided amount of years and returns the result
 def seconds(years_old)
     days_year = 365
     hours_day = 24
@@ -27,7 +28,7 @@ def seconds(years_old)
     age_seconds = years_old * days_year * hours_day * minutes_hour * seconds_minute
     return age_seconds.floor(2)
 end
-
+#program/user dialogue, used by the program to collect information for hours(years) from user and make calculations based on that info
 years = ask("How old is your car?").to_i
 puts "Wow!" 
 sleep 1
@@ -39,7 +40,7 @@ puts "Aha!"
 sleep 1
 puts "Fun fact: If your car measured time instead of miles, your odometer would read: #{hours(years)} hours!"
 sleep 1
-
+#program/user dialogue, used by the program to collect information for minutes(decades) from user and make calculations based on that info
 decades = ask("How many decades old is your house?").to_i
 puts "Impressive.."
 sleep 1
@@ -49,7 +50,7 @@ puts "That's #{minutes(decades)} minutes worth of house!"
 sleep 1
 puts "Ok, one more and I'll leave you alone"
 sleep 2
-
+#program/user dialogue, used by the program to collect information for seconds(age) from user and make calculations based on that info
 age = ask("How old are you?").to_i
 puts "Ah, a wonderful age indeed!"
 sleep 1
